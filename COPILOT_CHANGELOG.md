@@ -51,3 +51,19 @@
 - **Change:** Fixed test to check `isLoggedIn` instead of non-existent `isAuthenticated` property.
 - **Reason:** Align test with actual store state and resolve test failure.
 - **By:** GitHub Copilot
+
+## [2025-07-01]
+- **File:** frontend/src/__tests__/auth-store.test.ts
+- **Change:** Expanded tests to cover signIn and logout actions, and added beforeEach to reset store state for test isolation.
+- **Reason:** Improve test coverage and ensure test isolation for Zustand store.
+- **By:** GitHub Copilot
+
+- **File:** frontend/src/components/ui/card.test.tsx
+- **Change:** Added beforeEach to clear localStorage, sessionStorage, and reset modules before each test for isolation.
+- **Reason:** Prevent state leakage and ensure clean environment for each test.
+- **By:** GitHub Copilot
+
+- **File:** frontend/src/components/ui/dialog.test.tsx
+- **Change:** Added beforeEach to clear localStorage, sessionStorage, and reset modules before each test for isolation.
+- **Reason:** Prevent state leakage and ensure clean environment for each test.
+- **By:** GitHub Copilot

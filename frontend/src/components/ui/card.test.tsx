@@ -4,6 +4,12 @@ import '@testing-library/jest-dom'; // Importing jest-dom for custom matchers
 import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from './card';
 
 describe('Card UI Components', () => {
+  beforeEach(() => {
+    window.localStorage.clear();
+    window.sessionStorage.clear();
+    jest.resetModules();
+  });
+
   it('renders Card with children', () => {
     const { getByText } = render(<Card>Test Card</Card>);
     expect(getByText('Test Card')).toBeInTheDocument();

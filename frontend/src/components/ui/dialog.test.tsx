@@ -15,6 +15,12 @@ import {
 } from './dialog';
 
 describe('Dialog UI Components', () => {
+  beforeEach(() => {
+    window.localStorage.clear();
+    window.sessionStorage.clear();
+    jest.resetModules();
+  });
+
   it('renders Dialog with children', () => {
     // const { getByText } = render(<Dialog>Dialog Content</Dialog>);
     // expect(getByText('Dialog Content')).toBeInTheDocument();
